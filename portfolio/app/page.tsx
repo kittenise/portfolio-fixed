@@ -76,7 +76,7 @@ export default function Portfolio() {
               initial="hidden"
               animate="visible"
             >
-            {['home', 'writing', 'projects', 'about', 'cv', 'contact'].map((page) => (
+            {['home', 'writing', 'projects', 'about', 'CV', 'contact'].map((page) => (
               <motion.span
                 key={page}
                 variants={navItemVariants}
@@ -411,7 +411,7 @@ export default function Portfolio() {
                       <span className="font-sans text-sm font-semibold uppercase tracking-wider text-accent block mb-3">On Practice</span>
                       <p className="font-serif italic text-2xl text-text-main m-0 leading-relaxed">&quot;I am drawn to languages precisely because they resist complete translation — the untranslatable residue is often where the most interesting thinking happens.&quot;</p>
                     </motion.div>
-                    <motion.p variants={scrollItemVariants}>I write essays on food, place, and the life of books — published on Medium and Kompasiana. My research papers are available on ResearchGate. I speak Indonesian, French, English, Javanese, and Arabic.</motion.p>
+                    <motion.p variants={scrollItemVariants}>I write essays on food, place, and the life of books — published on Medium and Kompasiana. My research papers are available on ResearchGate. I speak Indonesian, French, and English.</motion.p>
                   </div>
                   <motion.div variants={scrollItemVariants} className="flex flex-col gap-6">
                     <div className="sidebar-card bg-bg-card border border-border-color rounded-2xl p-8 shadow-sm">
@@ -423,7 +423,7 @@ export default function Portfolio() {
                         </div>
                         <div>
                           <span className="text-sm font-medium text-text-light block mb-1">Languages</span>
-                          <span className="font-sans text-base font-medium text-text-main">Indonesian, French, English, Javanese, Arabic</span>
+                          <span className="font-sans text-base font-medium text-text-main">Indonesian, French, English</span>
                         </div>
                         <div>
                           <span className="text-sm font-medium text-text-light block mb-1">Focus</span>
@@ -437,8 +437,8 @@ export default function Portfolio() {
             </motion.div>
           )}
 
-          {activePage === 'cv' && (
-            <motion.div key="cv" variants={pageVariants} initial="initial" animate="animate" exit="exit" className="page-content">
+          {activePage === 'CV' && (
+            <motion.div key="CV" variants={pageVariants} initial="initial" animate="animate" exit="exit" className="page-content">
               <div className="container mx-auto px-6 md:px-16 py-16 md:py-24">
                 <motion.header variants={scrollContainerVariants} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} className="pb-10 md:pb-16 mb-10 md:mb-16 relative">
                   <motion.div 
@@ -448,7 +448,7 @@ export default function Portfolio() {
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 1.2, ease: "easeOut" as const, delay: 0.2 }}
                   />
-                  <motion.span variants={scrollItemVariants} className="text-sm font-semibold tracking-wider uppercase text-accent">Curriculum Vitæ</motion.span>
+                  <motion.span variants={scrollItemVariants} className="text-sm font-semibold tracking-wider uppercase text-accent">Curriculum Vita</motion.span>
                   <motion.h1 variants={scrollItemVariants} className="text-5xl md:text-6xl font-serif font-semibold mt-2 mb-6 text-text-main">Experience.</motion.h1>
                   <motion.p variants={scrollItemVariants} className="font-serif italic text-2xl text-text-main/90 max-w-[50ch] leading-snug">A record of research, teaching, and professional translation — across three languages and two disciplines.</motion.p>
                 </motion.header>

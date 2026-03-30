@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { ArrowRight, ExternalLink, Mail, CircleCheck } from 'lucide-react';
 
 export default function Portfolio() {
@@ -22,13 +22,13 @@ export default function Portfolio() {
 
   const pageVariants = {
     initial: { opacity: 0, y: 10 },
-    animate: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1], staggerChildren: 0.1 } },
-    exit: { opacity: 0, y: -6, transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] } }
+    animate: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" as const, staggerChildren: 0.1 } },
+    exit: { opacity: 0, y: -6, transition: { duration: 0.35, ease: "easeInOut" as const } }
   };
 
   const heroItemVariants = {
     initial: { opacity: 0, y: 24, filter: 'blur(4px)' },
-    animate: { opacity: 1, y: 0, filter: 'blur(0px)', transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1] } }
+    animate: { opacity: 1, y: 0, filter: 'blur(0px)', transition: { duration: 0.9, ease: "easeOut" as const} }
   };
 
   const scrollContainerVariants = {
@@ -38,7 +38,7 @@ export default function Portfolio() {
 
   const scrollItemVariants = {
     hidden: { opacity: 0, y: 24 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeInOut" as const } }
   };
 
   const navContainerVariants = {
@@ -46,10 +46,17 @@ export default function Portfolio() {
     visible: { opacity: 1, transition: { staggerChildren: 0.07, delayChildren: 0.3 } }
   };
 
-  const navItemVariants = {
-    hidden: { opacity: 0, y: -6 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } }
-  };
+  const navItemVariants: Variants = {
+  hidden: { opacity: 0, y: -6 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeInOut" as const
+    }
+  }
+};
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -69,7 +76,7 @@ export default function Portfolio() {
               initial="hidden"
               animate="visible"
             >
-            {['home', 'writing', 'projects', 'about', 'cv', 'contact'].map((page) => (
+            {['home', 'writing', 'projects', 'about', 'CV', 'contact'].map((page) => (
               <motion.span
                 key={page}
                 variants={navItemVariants}
@@ -95,7 +102,7 @@ export default function Portfolio() {
                   className="absolute bottom-0 left-0 w-full h-[1px] bg-border-color origin-left"
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: 1 }}
-                  transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.5 }}
+                  transition={{ duration: 1.2, ease: "easeOut"as const, delay: 0.5 }}
                 />
                 <div className="container mx-auto px-6 md:px-16">
                   <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-16 items-center">
@@ -251,7 +258,7 @@ export default function Portfolio() {
                     initial={{ scaleX: 0 }}
                     whileInView={{ scaleX: 1 }}
                     viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+                    transition={{ duration: 1.2, ease: "easeOut"as const, delay: 0.2 }}
                   />
                   <motion.span variants={scrollItemVariants} className="text-sm font-semibold tracking-wider uppercase text-accent">Archive</motion.span>
                   <motion.h1 variants={scrollItemVariants} className="text-5xl md:text-6xl font-serif font-semibold mt-2 mb-6 text-text-main">Writing & Research.</motion.h1>
@@ -325,7 +332,7 @@ export default function Portfolio() {
                     initial={{ scaleX: 0 }}
                     whileInView={{ scaleX: 1 }}
                     viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+                    transition={{ duration: 1.2, ease: "easeOut"as const, delay: 0.2 }}
                   />
                   <motion.span variants={scrollItemVariants} className="text-sm font-semibold tracking-wider uppercase text-accent">Technical Work</motion.span>
                   <motion.h1 variants={scrollItemVariants} className="text-5xl md:text-6xl font-serif font-semibold mt-2 mb-6 text-text-main">Projects.</motion.h1>
@@ -390,7 +397,7 @@ export default function Portfolio() {
                     initial={{ scaleX: 0 }}
                     whileInView={{ scaleX: 1 }}
                     viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+                    transition={{ duration: 1.2, ease: "easeOut"as const, delay: 0.2 }}
                   />
                   <motion.span variants={scrollItemVariants} className="text-sm font-semibold tracking-wider uppercase text-accent">Profile</motion.span>
                   <motion.h1 variants={scrollItemVariants} className="text-5xl md:text-6xl font-serif font-semibold mt-2 mb-6 text-text-main">About.</motion.h1>
@@ -404,7 +411,7 @@ export default function Portfolio() {
                       <span className="font-sans text-sm font-semibold uppercase tracking-wider text-accent block mb-3">On Practice</span>
                       <p className="font-serif italic text-2xl text-text-main m-0 leading-relaxed">&quot;I am drawn to languages precisely because they resist complete translation — the untranslatable residue is often where the most interesting thinking happens.&quot;</p>
                     </motion.div>
-                    <motion.p variants={scrollItemVariants}>I write essays on food, place, and the life of books — published on Medium and Kompasiana. My research papers are available on ResearchGate. I speak Indonesian, French, English, Javanese, and Arabic.</motion.p>
+                    <motion.p variants={scrollItemVariants}>I write essays on food, place, and the life of books — published on Medium and Kompasiana. My research papers are available on ResearchGate. I speak Indonesian, French, and English.</motion.p>
                   </div>
                   <motion.div variants={scrollItemVariants} className="flex flex-col gap-6">
                     <div className="sidebar-card bg-bg-card border border-border-color rounded-2xl p-8 shadow-sm">
@@ -416,7 +423,7 @@ export default function Portfolio() {
                         </div>
                         <div>
                           <span className="text-sm font-medium text-text-light block mb-1">Languages</span>
-                          <span className="font-sans text-base font-medium text-text-main">Indonesian, French, English, Javanese, Arabic</span>
+                          <span className="font-sans text-base font-medium text-text-main">Indonesian, French, English</span>
                         </div>
                         <div>
                           <span className="text-sm font-medium text-text-light block mb-1">Focus</span>
@@ -430,8 +437,8 @@ export default function Portfolio() {
             </motion.div>
           )}
 
-          {activePage === 'cv' && (
-            <motion.div key="cv" variants={pageVariants} initial="initial" animate="animate" exit="exit" className="page-content">
+          {activePage === 'CV' && (
+            <motion.div key="CV" variants={pageVariants} initial="initial" animate="animate" exit="exit" className="page-content">
               <div className="container mx-auto px-6 md:px-16 py-16 md:py-24">
                 <motion.header variants={scrollContainerVariants} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} className="pb-10 md:pb-16 mb-10 md:mb-16 relative">
                   <motion.div 
@@ -439,9 +446,9 @@ export default function Portfolio() {
                     initial={{ scaleX: 0 }}
                     whileInView={{ scaleX: 1 }}
                     viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+                    transition={{ duration: 1.2, ease: "easeOut"as const, delay: 0.2 }}
                   />
-                  <motion.span variants={scrollItemVariants} className="text-sm font-semibold tracking-wider uppercase text-accent">Curriculum Vitæ</motion.span>
+                  <motion.span variants={scrollItemVariants} className="text-sm font-semibold tracking-wider uppercase text-accent">Curriculum Vitae</motion.span>
                   <motion.h1 variants={scrollItemVariants} className="text-5xl md:text-6xl font-serif font-semibold mt-2 mb-6 text-text-main">Experience.</motion.h1>
                   <motion.p variants={scrollItemVariants} className="font-serif italic text-2xl text-text-main/90 max-w-[50ch] leading-snug">A record of research, teaching, and professional translation — across three languages and two disciplines.</motion.p>
                 </motion.header>
@@ -484,8 +491,6 @@ export default function Portfolio() {
                           <span className="tag-premium">Indonesian</span>
                           <span className="tag-premium">French</span>
                           <span className="tag-premium">English</span>
-                          <span className="tag-premium">Javanese</span>
-                          <span className="tag-premium">Arabic</span>
                         </div>
                       </div>
                       <div>
@@ -514,7 +519,7 @@ export default function Portfolio() {
                     initial={{ scaleX: 0 }}
                     whileInView={{ scaleX: 1 }}
                     viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+                    transition={{ duration: 1.2, ease: "easeOut"as const, delay: 0.2 }}
                   />
                   <motion.span variants={scrollItemVariants} className="text-sm font-semibold tracking-wider uppercase text-accent">Inquiry</motion.span>
                   <motion.h1 variants={scrollItemVariants} className="text-5xl md:text-6xl font-serif font-semibold mt-2 mb-6 text-text-main">Get in Touch.</motion.h1>

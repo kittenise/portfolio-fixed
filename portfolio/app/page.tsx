@@ -147,11 +147,11 @@ export default function Portfolio() {
                           </div>
                           <div>
                             <span className="text-sm font-medium text-text-light block mb-1">Focus</span>
-                            <span className="font-sans text-base font-medium text-text-main">Digital humanities</span>
+                            <span className="font-sans text-base font-medium text-text-main">Applied linguistics</span>
                           </div>
                           <div>
                             <span className="text-sm font-medium text-text-light block mb-1">Languages</span>
-                            <span className="font-sans text-base font-medium text-text-main">5 spoken</span>
+                            <span className="font-sans text-base font-medium text-text-main">3 spoken</span>
                           </div>
                         </div>
                       </div>
@@ -262,7 +262,7 @@ export default function Portfolio() {
                   />
                   <motion.span variants={scrollItemVariants} className="text-sm font-semibold tracking-wider uppercase text-accent">Archive</motion.span>
                   <motion.h1 variants={scrollItemVariants} className="text-5xl md:text-6xl font-serif font-semibold mt-2 mb-6 text-text-main">Writing & Research.</motion.h1>
-                  <motion.p variants={scrollItemVariants} className="font-serif italic text-2xl text-text-main/90 max-w-[50ch] leading-snug">Essays on food, place, and the life of books — alongside academic papers on semiotics, Creole linguistics, and the politics of literary aesthetics.</motion.p>
+                  <motion.p variants={scrollItemVariants} className="font-serif italic text-2xl text-text-main/90 max-w-[50ch] leading-snug">Essays on food, place, and the life of books — alongside academic papers on semiotics,  linguistics, and the politics of literary aesthetics.</motion.p>
                 </motion.header>
                 
                 <motion.div variants={scrollContainerVariants} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} className="mb-24">
@@ -427,7 +427,7 @@ export default function Portfolio() {
                         </div>
                         <div>
                           <span className="text-sm font-medium text-text-light block mb-1">Focus</span>
-                          <span className="font-sans text-base font-medium text-text-main">Semiotics, Creole linguistics</span>
+                          <span className="font-sans text-base font-medium text-text-main">Semiotics, Linguistics</span>
                         </div>
                       </div>
                     </div>

@@ -147,11 +147,11 @@ export default function Portfolio() {
                           </div>
                           <div>
                             <span className="text-sm font-medium text-text-light block mb-1">Focus</span>
-                            <span className="font-sans text-base font-medium text-text-main">Digital humanities</span>
+                            <span className="font-sans text-base font-medium text-text-main">Applied linguistics</span>
                           </div>
                           <div>
                             <span className="text-sm font-medium text-text-light block mb-1">Languages</span>
-                            <span className="font-sans text-base font-medium text-text-main">5 spoken</span>
+                            <span className="font-sans text-base font-medium text-text-main">3 spoken</span>
                           </div>
                         </div>
                       </div>
@@ -262,7 +262,7 @@ export default function Portfolio() {
                   />
                   <motion.span variants={scrollItemVariants} className="text-sm font-semibold tracking-wider uppercase text-accent">Archive</motion.span>
                   <motion.h1 variants={scrollItemVariants} className="text-5xl md:text-6xl font-serif font-semibold mt-2 mb-6 text-text-main">Writing & Research.</motion.h1>
-                  <motion.p variants={scrollItemVariants} className="font-serif italic text-2xl text-text-main/90 max-w-[50ch] leading-snug">Essays on food, place, and the life of books — alongside academic papers on semiotics, Creole linguistics, and the politics of literary aesthetics.</motion.p>
+                  <motion.p variants={scrollItemVariants} className="font-serif italic text-2xl text-text-main/90 max-w-[50ch] leading-snug">Essays on food, place, and the life of books — alongside academic papers on semiotics, applied inguistics, and the politics of literary aesthetics.</motion.p>
                 </motion.header>
                 
                 <motion.div variants={scrollContainerVariants} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} className="mb-24">
@@ -427,7 +427,7 @@ export default function Portfolio() {
                         </div>
                         <div>
                           <span className="text-sm font-medium text-text-light block mb-1">Focus</span>
-                          <span className="font-sans text-base font-medium text-text-main">Semiotics, Creole linguistics</span>
+                          <span className="font-sans text-base font-medium text-text-main">Semiotics, Linguistics</span>
                         </div>
                       </div>
                     </div>
@@ -527,13 +527,13 @@ export default function Portfolio() {
                 </motion.header>
                 <motion.div variants={scrollContainerVariants} initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-50px" }} className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                   <div className="flex flex-col gap-12">
-                    <motion.a variants={scrollItemVariants} href="mailto:hello@example.com" className="flex items-center gap-6 group">
+                    <motion.a variants={scrollItemVariants} href="mailto:shafirakemala@outlook.fr" className="flex items-center gap-6 group">
                       <div className="w-16 h-16 bg-bg-card border border-border-color rounded-2xl flex items-center justify-center text-text-main transition-all duration-300 group-hover:bg-accent group-hover:text-white group-hover:border-accent group-hover:-translate-y-1 shadow-sm">
                         <Mail className="w-6 h-6" />
                       </div>
                       <div>
                         <span className="text-sm font-medium text-text-light block mb-1">Direct Email</span>
-                        <span className="font-serif italic text-2xl text-text-main email-address">hello@example.com</span>
+                        <span className="font-serif italic text-2xl text-text-main email-address">shafirakemala@outlook.fr</span>
                       </div>
                     </motion.a>
                     <motion.div variants={scrollItemVariants} className="accent-note p-8 bg-accent-light rounded-2xl border-l-4 border-accent">

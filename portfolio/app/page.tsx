@@ -448,7 +448,7 @@ export default function Portfolio() {
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 1.2, ease: "easeOut" as const, delay: 0.2 }}
                   />
-                  <motion.span variants={scrollItemVariants} className="text-sm font-semibold tracking-wider uppercase text-accent">Curriculum Vita</motion.span>
+                  <motion.span variants={scrollItemVariants} className="text-sm font-semibold tracking-wider uppercase text-accent">Curriculum Vitae</motion.span>
                   <motion.h1 variants={scrollItemVariants} className="text-5xl md:text-6xl font-serif font-semibold mt-2 mb-6 text-text-main">Experience.</motion.h1>
                   <motion.p variants={scrollItemVariants} className="font-serif italic text-2xl text-text-main/90 max-w-[50ch] leading-snug">A record of research, teaching, and professional translation — across three languages and two disciplines.</motion.p>
                 </motion.header>
@@ -491,8 +491,6 @@ export default function Portfolio() {
                           <span className="tag-premium">Indonesian</span>
                           <span className="tag-premium">French</span>
                           <span className="tag-premium">English</span>
-                          <span className="tag-premium">Javanese</span>
-                          <span className="tag-premium">Arabic</span>
                         </div>
                       </div>
                       <div>
@@ -535,7 +533,7 @@ export default function Portfolio() {
                       </div>
                       <div>
                         <span className="text-sm font-medium text-text-light block mb-1">Direct Email</span>
-                        <span className="font-serif italic text-2xl text-text-main email-address">hello@example.com</span>
+                        <span className="font-serif italic text-2xl text-text-main email-address">shafirakemala@outlook.fr</span>
                       </div>
                     </motion.a>
                     <motion.div variants={scrollItemVariants} className="accent-note p-8 bg-accent-light rounded-2xl border-l-4 border-accent">

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, ExternalLink, Mail, CircleCheck } from 'lucide-react';
 
 export default function Portfolio() {
@@ -22,13 +22,13 @@ export default function Portfolio() {
 
   const pageVariants = {
     initial: { opacity: 0, y: 10 },
-    animate: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1], staggerChildren: 0.1 } },
-    exit: { opacity: 0, y: -6, transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] } }
+    animate: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut", staggerChildren: 0.1 } },
+    exit: { opacity: 0, y: -6, transition: { duration: 0.35, ease: "easeInOut" } }
   };
 
   const heroItemVariants = {
     initial: { opacity: 0, y: 24, filter: 'blur(4px)' },
-    animate: { opacity: 1, y: 0, filter: 'blur(0px)', transition: { duration: 0.9, ease: [0.22, 1, 0.36, 1] } }
+    animate: { opacity: 1, y: 0, filter: 'blur(0px)', transition: { duration: 0.9, ease: "easeOut" } }
   };
 
   const scrollContainerVariants = {
@@ -38,7 +38,7 @@ export default function Portfolio() {
 
   const scrollItemVariants = {
     hidden: { opacity: 0, y: 24 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeInOut" } }
   };
 
   const navContainerVariants = {
@@ -48,7 +48,7 @@ export default function Portfolio() {
 
   const navItemVariants = {
     hidden: { opacity: 0, y: -6 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeInOut" } }
   };
 
   return (
@@ -95,7 +95,7 @@ export default function Portfolio() {
                   className="absolute bottom-0 left-0 w-full h-[1px] bg-border-color origin-left"
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: 1 }}
-                  transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.5 }}
+                  transition={{ duration: 1.2, ease: "easeOut", delay: 0.5 }}
                 />
                 <div className="container mx-auto px-6 md:px-16">
                   <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-16 items-center">
@@ -251,7 +251,7 @@ export default function Portfolio() {
                     initial={{ scaleX: 0 }}
                     whileInView={{ scaleX: 1 }}
                     viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+                    transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
                   />
                   <motion.span variants={scrollItemVariants} className="text-sm font-semibold tracking-wider uppercase text-accent">Archive</motion.span>
                   <motion.h1 variants={scrollItemVariants} className="text-5xl md:text-6xl font-serif font-semibold mt-2 mb-6 text-text-main">Writing & Research.</motion.h1>
@@ -325,7 +325,7 @@ export default function Portfolio() {
                     initial={{ scaleX: 0 }}
                     whileInView={{ scaleX: 1 }}
                     viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+                    transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
                   />
                   <motion.span variants={scrollItemVariants} className="text-sm font-semibold tracking-wider uppercase text-accent">Technical Work</motion.span>
                   <motion.h1 variants={scrollItemVariants} className="text-5xl md:text-6xl font-serif font-semibold mt-2 mb-6 text-text-main">Projects.</motion.h1>
@@ -390,7 +390,7 @@ export default function Portfolio() {
                     initial={{ scaleX: 0 }}
                     whileInView={{ scaleX: 1 }}
                     viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+                    transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
                   />
                   <motion.span variants={scrollItemVariants} className="text-sm font-semibold tracking-wider uppercase text-accent">Profile</motion.span>
                   <motion.h1 variants={scrollItemVariants} className="text-5xl md:text-6xl font-serif font-semibold mt-2 mb-6 text-text-main">About.</motion.h1>
@@ -439,7 +439,7 @@ export default function Portfolio() {
                     initial={{ scaleX: 0 }}
                     whileInView={{ scaleX: 1 }}
                     viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+                    transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
                   />
                   <motion.span variants={scrollItemVariants} className="text-sm font-semibold tracking-wider uppercase text-accent">Curriculum Vitæ</motion.span>
                   <motion.h1 variants={scrollItemVariants} className="text-5xl md:text-6xl font-serif font-semibold mt-2 mb-6 text-text-main">Experience.</motion.h1>
@@ -514,7 +514,7 @@ export default function Portfolio() {
                     initial={{ scaleX: 0 }}
                     whileInView={{ scaleX: 1 }}
                     viewport={{ once: true, margin: "-50px" }}
-                    transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+                    transition={{ duration: 1.2, ease: "easeOut", delay: 0.2 }}
                   />
                   <motion.span variants={scrollItemVariants} className="text-sm font-semibold tracking-wider uppercase text-accent">Inquiry</motion.span>
                   <motion.h1 variants={scrollItemVariants} className="text-5xl md:text-6xl font-serif font-semibold mt-2 mb-6 text-text-main">Get in Touch.</motion.h1>
